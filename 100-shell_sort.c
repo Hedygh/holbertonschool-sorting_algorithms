@@ -26,11 +26,12 @@ void shell_sort(int *array, size_t size)
 				tmp = array[j];
 				array[j] = array[j - gap];
 				array[j - gap] = tmp;
-				print_array(array, size);
 				j -= gap;
 			}
 			i++;
 		}
 		gap = (gap - 1) / 3;
+
+		print_array(array, size);
 	}
 }
